@@ -59,7 +59,9 @@ print(json.dumps({"ok": True}))
 
 # 10) RecursionError – missing base case
 def down(n):
-    return (n - 1)
+    if n > 0:
+        return down(n - 1)
+    elif n == 0: 0
 print(down(5))
 
 
